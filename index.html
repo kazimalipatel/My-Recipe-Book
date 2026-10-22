@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Recipe Book</title>
+
+            <link rel="stylesheet" href="./style.css">
+            <link rel="stylesheet" href="./script.java">
+
+
+</head>
+
+<body>
+
+<header>
+    <div class="brand">
+        <span>♧</span> My Recipe Book
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#recipes">Recipes</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>
+            Good Food Brings<br>
+            People Together
+        </h1>
+
+        <p>
+            Explore delicious home-cooked favorites,
+            from quick weeknight meals to comforting classics.
+        </p>
+
+        <input
+            type="text"
+            id="searchInput"
+            class="search"
+            placeholder="Search recipes by name or ingredient..."
+        >
+
+    </div>
+
+</section>
+
+
+<!-- Recipes Section -->
+<section class="recipes-section" id="recipes">
+
+    <div class="section-heading">
+
+        <h2>Featured Recipes</h2>
+
+        <span id="recipeCount">
+            6 recipes
+        </span>
+
+    </div>
+
+
+    <div class="recipe-grid" id="recipeGrid">
+
+
+        <!-- Recipe 1 -->
+        <div class="recipe-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=1000&q=80"
+                alt="Paneer Butter Masala"
+            >
+
+            <div class="recipe-content">
+
+                <h3>Paneer Butter Masala</h3>
+
+                <p>
+                    Tender paneer in a creamy tomato gravy,
+                    delicious with roti or naan.
+                </p>
+
+                <div class="recipe-meta">
+                    <span>◷ 30 min</span>
+                    <span>♜ 3 servings</span>
+                    <span>Easy</span>
+                </div>
+
+                <button onclick="openRecipe('paneer')">
+                    View Recipe
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Recipe 2 -->
+        <div class="recipe-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=1000&q=80"
+                alt="Vegetable Pulao"
+            >
+
+            <div class="recipe-content">
+
+                <h3>Vegetable Pulao</h3>
+
+                <p>
+                    A quick one-pot rice dish with colorful
+                    vegetables and fragrant spices.
+                </p>
+
+                <div class="recipe-meta">
+                    <span>◷ 25 min</span>
+                    <span>♜ 3 servings</span>
+                    <span>Easy</span>
+                </div>
+
+                <button onclick="openRecipe('pulao')">
+                    View Recipe
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Recipe 3 -->
+        <div class="recipe-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=1000&q=80"
+                alt="Masala Dosa"
+            >
+
+            <div class="recipe-content">
+
+                <h3>Masala Dosa</h3>
+
+                <p>
+                    Crispy dosa filled with spicy potatoes,
+                    served with chutney and sambar.
+                </p>
+
+                <div class="recipe-meta">
+                    <span>◷ 35 min</span>
+                    <span>♜ 3 dosas</span>
+                    <span>Medium</span>
+                </div>
+
+                <button onclick="openRecipe('dosa')">
+                    View Recipe
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Recipe 4 -->
+        <div class="recipe-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&w=1000&q=80"
+                alt="Chole Masala"
+            >
+
+            <div class="recipe-content">
+
+                <h3>Chole Masala</h3>
+
+                <p>
+                    Punjabi-style chickpeas cooked in a rich
+                    onion and tomato gravy.
+                </p>
+
+                <div class="recipe-meta">
+                    <span>◷ 40 min</span>
+                    <span>♜ 4 servings</span>
+                    <span>Medium</span>
+                </div>
+
+                <button onclick="openRecipe('chole')">
+                    View Recipe
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Recipe 5 -->
+        <div class="recipe-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1000&q=80"
+                alt="Aloo Paratha"
+            >
+
+            <div class="recipe-content">
+
+                <h3>Aloo Paratha</h3>
+
+                <p>
+                    Golden flatbread stuffed with seasoned
+                    potatoes and served with yogurt.
+                </p>
+
+                <div class="recipe-meta">
+                    <span>◷ 30 min</span>
+                    <span>♜ 4 parathas</span>
+                    <span>Easy</span>
+                </div>
+
+                <button onclick="openRecipe('paratha')">
+                    View Recipe
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Recipe 6 -->
+        <div class="recipe-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1000&q=80"
+                alt="Dal Tadka"
+            >
+
+            <div class="recipe-content">
+
+                <h3>Dal Tadka</h3>
+
+                <p>
+                    Yellow lentils finished with aromatic garlic,
+                    cumin and chili tempering.
+                </p>
+
+                <div class="recipe-meta">
+                    <span>◷ 30 min</span>
+                    <span>♜ 3 servings</span>
+                    <span>Easy</span>
+                </div>
+
+                <button onclick="openRecipe('dal')">
+                    View Recipe
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="noResults">
+        No recipes found. Try another search.
+    </div>
+
+</section>
+
+
+<!-- Recipe Detail Section -->
+<section class="recipe-detail" id="recipeDetail">
+
+    <button class="back-button" onclick="closeRecipe()">
+        ← Back to Recipes
+    </button>
+
+    <img id="detailImage" class="detail-image" src="" alt="Recipe">
+
+    <h1 id="detailTitle"></h1>
+
+    <p id="detailDescription" class="detail-description"></p>
+
+    <div id="detailMeta" class="detail-meta"></div>
+
+
+    <div class="recipe-columns">
+
+        <!-- Ingredients -->
+        <div>
+
+            <h2>Ingredients</h2>
+
+            <ul id="ingredientsList" class="ingredients-list">
+            </ul>
+
+        </div>
+
+
+        <!-- Instructions -->
+        <div>
+
+            <h2>Instructions</h2>
+
+            <ol id="instructionsList" class="instructions-list">
+            </ol>
+
+        </div>
+
+    </div>
+
+
+    <div class="kitchen-tip">
+
+        <h3>Kitchen Tip</h3>
+
+        <p id="kitchenTip"></p>
+
+    </div>
+
+</section>
+
+
+<!-- About Section -->
+<section class="about-section" id="about">
+
+    <h2>About My Recipe Book</h2>
+
+    <p>
+        My Recipe Book is a simple and user-friendly website
+        created for food lovers. It provides delicious recipes,
+        ingredients, cooking instructions and useful kitchen tips
+        in one place.
+    </p>
+
+    <p>
+        Our goal is to make cooking easy, enjoyable and accessible
+        for everyone.
+    </p>
+
+</section>
+
+
+<!-- Contact Section -->
+<section class="contact-section" id="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>
+        Email: myrecipebook@example.com
+    </p>
+
+    <p>
+        We would love to hear your recipe suggestions and feedback.
+    </p>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 My Recipe Book | All Rights Reserved
+    </p>
+
+</footer>
+
+
+<script src="./script.java"></script>
+
+</body>
+</html>
